@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms Project</title>
+    <link rel="icon" href="/Images/K_Ashwin_Transparent_circle.png" />
+
+    <style>
+      h1 {
+        font-size: xxx-large;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        background-color: blueviolet;
+      }
+
+      input,
+      textarea,
+      button,
+      select,
+      textarea {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: left;
+        font-size: 20px;
+        width: 25%;
+      }
+
+      .gender,
+      .checkbox, .terms {
+        width: 25px;
+      }
+
+	  .age{
+		width: 75px;
+	  }
+
+	  .button {
+		  width: fit-content;
+		  margin-right: 20px;
+	  }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Forms Exercise</h1>
+
+    <div>
+      <h2 style="text-decoration: underline">1) Registration Form :-</h2>
+
+      <form
+        action="/Images/K_Ashwin_Transparent_circle.png"
+        target="_blank"
+        method="get"
+		autocomplete="on"
+		accept-charset="utf-8"
+		name="form_registration"
+      >
+        <fieldset>
+          <legend>Registration Form</legend>
+
+          <label for="first_name">Enter Your First Name :- </label>
+          <input
+            class="input-container"
+            type="text"
+            id="first_name"
+            name="first_name"
+            placeholder="First Name"
+            required
+            autofocus
+          />
+          <br />
+          <br />
+
+          <label for="last_name">Enter Your Last Name :- </label>
+          <input
+            class="input-container"
+            type="text"
+            id="last_name"
+            name="last_name"
+            placeholder="Last Name"
+            required
+          /><br />
+          <br />
+
+          <label for="age">Enter Your Age :- </label>
+          <input
+            type="number"
+            min="1"
+            max="125"
+            placeholder="Age"
+            required
+            class="age"
+          />
+          <br />
+          <br />
+
+          <label for="email_address">Enter Your Email Address :- </label>
+          <input
+            type="email"
+            id="email_address"
+            name="email_address"
+            placeholder="Email Address"
+            required
+            class="input-container"
+          />
+          <br />
+          <br />
+
+          <label for="new_password">Enter Your New Password :- </label>
+          <input
+            class="input-container"
+            type="password"
+            id="new_password"
+            name="new_password"
+            placeholder="New Password"
+            required
+            pattern="[a-zA-Z0-9@!#$%^&*]{4,12}"
+          />
+          <br />
+          <br />
+
+          <label for="retype_password">Retype Your Password :- </label>
+          <input
+            type="password"
+            name="retype_password"
+            id="retype_password"
+            placeholder="Retype Your Password"
+            required
+            pattern="[a-zA-Z0-9@!#$%^&*]{4,12}"
+          />
+          <br />
+          <br />
+
+		  <label for="dob">Date of Birth :- </label>
+		  <input type="date" name="dob" id="dob" placeholder="dd/mm/yyyy" min="1990-01-01" max="2023-03-31">
+
+          <div>
+            <label for="gender">Choose Your Gender :- </label> <br />
+            <input
+              class="gender"
+              type="radio"
+              id="gender"
+              name="gender"
+              value="Male"
+              checked
+            />
+            <label for="Male">Male</label> <br />
+            <input
+              class="gender"
+              type="radio"
+              name="gender"
+              id="gender"
+              value="Female"
+            />
+            <label for="Female">Female</label> <br />
+          </div>
+
+          <br />
+
+          <label for="programming_language"
+            >What are the Programming Languages you know ?
+          </label>
+          <br />
+
+          <input
+            type="checkbox"
+            id="python"
+            name="python"
+            value="Python"
+            checked
+            class="checkbox"
+          />
+          <label for="python">Python</label> <br />
+          <input
+            type="checkbox"
+            id="java"
+            name="java"
+            value="Java"
+            class="checkbox"
+          />
+          <label for="java">Java</label> <br />
+          <input
+            type="checkbox"
+            id="js"
+            name="js"
+            value="JavaScript"
+            class="checkbox"
+          />
+          <label for="js">JavaScript</label> <br />
+          <br />
+
+          <label for="address">Enter Your Full Address :- </label> <br />
+          <textarea
+            class="input-container"
+            name="address"
+            id="address`"
+            cols="20"
+            rows="5"
+            placeholder="Enter Your Address"
+            required
+          ></textarea>
+          <br />
+          <br />
+
+          <label for="file">Select Your File :- </label>
+          <input type="file" name="file" id="file" required /> <br />
+          <br />
+
+          <label for="college">Select Your College :- </label>
+          <select name="college" id="college" required>
+            <option value="pec">Panimalar Engineering College</option>
+            <option value="pit">Panimalar Institute of Technology</option>
+            <option value="rec">Rajalakshmi Engineering College</option>
+            <option value="rit">Rajalakshmi Institute of Technology</option>
+            <option value="iit">Indian Institute of Technology</option>
+            <option value="anna_university">Anna University</option>
+            <option value="vel_tech">Vel Tech Engineering College</option>
+          </select>
+          <br />
+          <br />
+
+          <label for="branch">Choose Your Branch :- </label>
+          <select name="branch" id="branch" required>
+            <option value="BE">B.E</option>
+            <option value="BTech">B.Tech</option>
+            <option value="ME">ME</option>
+            <option value="MTech">M.Tech</option>
+            <option value="MBA">MBA</option>
+          </select>
+          <br />
+          <br />
+
+          <label for="department">Select Your Department :- </label>
+          <input
+            type="text"
+            list="department"
+            required
+            class="input-container"
+            placeholder="Enter Your Department"
+          />
+          <datalist id="department">
+            <option value="Computer Science and Engineering"></option>
+            <option value="Information Technology"></option>
+            <option value="Mechanical Engineering"></option>
+            <option value="Electrial and Electronic Engineering"></option>
+            <option value="Electronics and Communication Engineering"></option>
+          </datalist>
+          <br />
+          <br />
+
+		  <input type="checkbox" name="terms" id="terms" class="terms">
+		  <label for="terms">
+			  By Clicking this checkbox, I accept the <a href="/Images/K_Ashwin_Transparent_circle.png" target="_blank">Terms and Conditions</a>
+		  </label> <br> <br>
+
+          <button
+		  class="button"
+            type="submit"
+            value="Submit this form"
+            id="submit_button"
+            name="submit_button"
+          >
+            Submit this Form
+          </button>
+          <button
+		  class="button"
+            type="reset"
+            value="Reset the Data"
+            id="reset_button"
+            name="reset_button"
+          >
+            Reset the data
+          </button>
+          <button
+		  class="button"
+            type="button"
+            value="Click this button"
+            id="button"
+            name="button"
+            onclick="alert('Welcome to my Form Submission Exercise!')"
+          >
+            Click this button
+          </button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
